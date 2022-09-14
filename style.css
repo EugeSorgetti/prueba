@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* body, html {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+} */
+
+.grid-hijo {
+    background-color: rgb(198, 138, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 32px;
+    /* animation: cambiarcolor 2s infinite ease-in-out; */
+
+}
+
+nav {
+    background-color: blue;
+}
+
+.snip1582 {
+ background-color: #c47135;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'BenchNine', Arial, sans-serif;
+  font-size: 1em;
+  font-size: 22px;
+  line-height: 1em;
+  margin: 15px 40px;
+  outline: none;
+  padding: 12px 40px 10px;
+  text-transform: uppercase;
+  font-weight: 700;
+  position: relative;
+}
+
+.snip1582::before, .snip1582::after {
+    border: 0 solid transparent;
+    transition: all 0.25s;
+    content: "";
+    height: 24px;
+    width: 24px;
+    position: absolute;
+}
+
+.snip1582:before {
+    border-color: #c47135;
+    border-top-width: 2px;
+    left: 0px;
+    top: -5px;
+  }
+
+  .snip1582:after {
+    border-bottom-width: 2px;
+    border-color: #c47135;
+    bottom: -5px;
+    right: 0px;
+  }
+
+  .snip1582:hover,
+.snip1582.hover {
+  background-color: #c47135;
+}
+
+.snip1582:hover:before,
+.snip1582.hover:before,
+.snip1582:hover:after,
+.snip1582.hover:after {
+  height: 100%;
+  width: 100%;
+}
+
+
+/* .grid-hijo:nth-child(2) {
+    animation-delay: 200ms;
+}
+.grid-hijo:nth-child(3) {
+    animation-delay: 300ms;
+}
+.grid-hijo:nth-child(4) {
+    animation-delay: 400ms;
+}
+.grid-hijo:nth-child(5) {
+    animation-delay: 500ms;
+}
+.grid-hijo:nth-child(6) {
+    animation-delay: 600ms;
+}
+.grid-hijo:nth-child(7) {
+    animation-delay: 700ms;
+}
+.grid-hijo:nth-child(8) {
+    animation-delay: 800ms;
+}
+.grid-hijo:nth-child(9) {
+    animation-delay: 900ms;
+}
+.grid-hijo:nth-child(10) {
+    animation-delay: 1000ms;
+}
+.grid-hijo:nth-child(11) {
+    animation-delay: 1100ms;
+}
+.grid-hijo:nth-child(12) {
+    animation-delay: 1200ms;
+} */
+
+/* @keyframes cambiarcolor {
+    0% {
+        background-color: rgb(198, 138, 255);
+    }
+
+    50% {
+        background-color: rgb(131, 6, 247);
+
+    }
+    70% {
+        background-color: rgb(247, 6, 227);
+    }
+    100% {
+        background-color: rgb(247, 207, 6);
+    }
+} */
+
+@keyframes cambiarcolor {
+    from {
+        filter: hue-rotate(0deg);
+        transform: translateY(0);
+    }
+    to {
+        filter: hue-rotate(180deg);
+        transform: translateY(-10px);
+    }
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+    grid-auto-rows: 240px;
+}
+
+.wide {
+    grid-column: span 2/auto;
+}
+
+.tall {
+    grid-row: 2/4;
+}
+.grid2 {
+    display: grid;
+    grid-template-columns: repeat(3,200px);
+    grid-auto-rows: 150px;
+    grid-template-areas:
+    "header article otro"
+    "header article otro"
+    "header footer footer"
+    ;
+}
+
+.grid2 > div {
+    font-size: 2rem;
+    display: grid;
+    
+}
+
+.header {
+    background-color: aquamarine;
+    grid-area: header;
+}
+
+.article {
+    background-color: rgb(255, 148, 148);
+    grid-area: article;
+}
+
+.otro {
+    background-color: rgb(153, 153, 255);
+    grid-area: otro;
+}
+
+.footer {
+    background-color: rgb(255, 135, 255);
+    grid-area: footer;
+}
+
+/* .responsive {
+    background-color: aqua;
+    height: 100vh;
+}
+
+@media only screen and (max-width: 900px) {
+    .responsive {
+        background-color: brown;
+    }
+
+    .grid2 {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 560px) {
+    .responsive {
+        background-color: blueviolet;
+    }
+} */
+
+/* .transformaciones > div {
+    width: 100px;
+    height: 100px;
+}
+
+.scale {
+    background-color: aqua;
+}
+
+.scale:hover {
+    transform: scale(2);
+    transition: 500ms ease-in;
+}
+
+.rotate {
+    background-color: rgb(0, 136, 255);
+}
+
+.rotate:hover {
+    transform: rotate(45deg);
+    transition: 500ms ease-in;
+}
+
+.translate {
+    background-color: rgb(68, 0, 255);
+
+}
+.translate:hover {
+
+    transform: translate(30px, 50px);
+    transition: 500ms ease-in;
+}
+
+.skew {
+    background-color: rgb(242, 0, 255);
+   
+}
+.skew:hover {
+    transform: skew(-15deg);
+    transition: 500ms ease-in;
+}
+
+.background {
+    background-color: rgb(255, 204, 0);
+}
+
+.background:hover {
+    background-color: rgb(238, 40, 40);
+    transition: 500ms ease-in;
+} */
